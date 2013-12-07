@@ -1,0 +1,31 @@
+
+An attempt to convert a "corporate" document into a LeTeX document. 
+
+
+
+Features
+========
+   - custom cover page
+   - customized text on cover page
+   - personalized header and footer
+
+To do
+=====
+
+   - add custom commands to improve reusability of the template
+   - tweak document font
+   - personalize title presentation
+   - vertical filigrane on every page
+
+
+Licence
+=======
+
+
+Images have been taken from:
+http://half-life.wikia.com/wiki/Aperture_Science
+
+
+for the rest, do what you want with the provided material.
+
+

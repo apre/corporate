@@ -1,0 +1,139 @@
+\documentclass[11pt,a4paper,english]{report}
+
+\usepackage{babel}
+\usepackage{url}
+\usepackage{bytefield}
+\usepackage{color}
+\usepackage{pdfpages}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{graphicx} 
+
+%\usepackage[medium,compact,raggedright]{titlesec} % to customize the \chapter page
+\usepackage[compact]{titlesec} % to customize the \chapter page
+%\titleformat{\chapter}[frame]
+%{\normalfont}
+%{\filright
+%\footnotesize
+%\enspace SECTION \thechapter\enspace}
+%{8pt}
+%{\Large\bfseries\filright}
+
+%%\titleformat{\chapter}[block] {\Large\bfseries}
+%{\Large\bfseries
+% \thechapter.\enspace}
+%{1pt}
+%{\Large\bfseries\filright}
+
+%\renewcommand{\thechapter}{\Roman{chapter}}
+\titleformat{\chapter}[hang]
+{\bfseries\Large}
+{ \huge\thechapter.}
+{0ex}
+{ \huge
+%%%\titlerule
+%\vspace{2ex}%%
+%%\filright
+}
+[\vspace{-3.5ex}%
+%\titlerule
+]
+
+
+%\titlespacing{\chapter}
+%{1pc}{*2}{*2}[5pc]
+
+
+\usepackage[absolute]{textpos} % absolute test positioning for title page
+
+
+%%\usepackage{draftwatermark}
+%\SetWatermarkText{Confidential}
+%\SetWatermarkAngle{90}
+%\SetWatermarkScale{1}
+
+\fancyhead{} % clears default header
+\fancyfoot{}
+
+
+\renewcommand{\footrulewidth}{0.4pt}
+%\fancyhead[RO,RE]{ - \thepage / \pageref{LastPage} - }
+%\fancyhead[LO,LE]{\includegraphics[height=1cm]{img/small_logo.png} }
+
+\fancyhead[R]{ - \thepage / \pageref{LastPage} - }
+\fancyhead[L]{\includegraphics[height=1cm]{img/small_logo.png} }
+\setlength\headheight{33pt} % increased it becaes of the logo
+
+\fancyfoot[RO,RE]{ Bas Droite\\ Date }
+\fancyfoot[LO,LE]{Project\\ Doc Title}
+
+\assignpagestyle{\chapter}{fancy}
+
+
+\def\wl{\par \vspace{\baselineskip}}
+
+\begin{document}
+
+\textblockorigin{0cm}{0cm}
+\begin{textblock*}{210mm}(0mm,70mm)
+\centering
+{ \bfseries\Huge
+Project Glados
+\wl
+\vspace{-1.2ex}
+Design Specification
+\wl
+\vspace{-1.2ex}
+ DOCXXX
+   }
+\end{textblock*}
+
+\begin{textblock*}{80mm}(130mm,276mm)
+\huge\bfseries
+DOCXXX
+\end{textblock*}
+
+
+\includepdf{img/cover_text.pdf}
+
+\pagestyle{fancy}
+
+\tableofcontents
+\pagestyle{fancy}
+\chapter{Introduction}
+
+
+\par Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris congue orci a odio vestibulum ornare. Vivamus pharetra nisl vitae bibendum auctor. Sed cursus fermentum neque a fermentum. Integer rutrum tempor massa rhoncus posuere. Suspendisse eu nisl egestas, varius nisi at, condimentum mi. Aliquam sem purus, vulputate non nulla eget, ultrices vestibulum enim. Duis faucibus lorem a turpis pretium, et vestibulum massa dictum. Fusce gravida quam cursus metus facilisis fermentum. Morbi id diam ut odio adipiscing pulvinar. Integer fringilla eget eros nec aliquam. Etiam sed lorem accumsan, rhoncus eros non, scelerisque tellus.
+
+\chapter{description}
+
+\section{Cras semper}
+\par Cras semper nisi quis sapien convallis iaculis. Etiam placerat sodales turpis. Aliquam aliquet nisi neque, sit amet tempus tellus ullamcorper sed. Integer luctus nisl leo, ut elementum eros molestie interdum. Proin lacus dui, feugiat et massa quis, commodo dapibus nulla. Vestibulum non neque vulputate justo porta ultricies. Pellentesque accumsan lobortis libero id eleifend. Morbi porta lacus non nisl porttitor aliquet. Integer orci nibh, sollicitudin lacinia mattis id, placerat at massa. Aliquam tincidunt massa ut venenatis euismod.
+
+\section{Vestibulum}
+\par Vestibulum porta rutrum vehicula. Curabitur malesuada condimentum diam, id mattis diam porta quis. Curabitur vitae augue a arcu ornare condimentum. Donec eu venenatis libero, eu ultricies massa. Pellentesque cursus odio et eros semper aliquet. Nullam dictum et dolor eu facilisis. Aliquam leo neque, blandit at sapien quis, placerat tempus dolor. Aliquam tempus quam turpis. Aenean cursus vel ipsum ut condimentum. Fusce fringilla egestas elit vitae lobortis. Nam id leo congue, adipiscing neque vel, aliquam sapien. Vivamus ligula massa, adipiscing vel leo sit amet, sollicitudin tincidunt sapien.
+
+\par Nullam et sem suscipit, gravida odio a, semper est. Aliquam sit amet mauris id felis egestas consectetur a eu dui. Nullam pretium odio quis mauris placerat, a fermentum risus dictum. Donec tempor, massa a fringilla rhoncus, quam diam hendrerit tortor, ac blandit augue dui ac tortor. Suspendisse ac arcu ultricies, iaculis est nec, viverra risus. Aenean rhoncus velit vel leo luctus porta. Vestibulum euismod leo pulvinar lacinia condimentum. Sed ultricies mi id nisl rhoncus, in rutrum sem consequat. Proin mattis, est vel molestie gravida, odio lectus ullamcorper leo, id facilisis erat massa in quam. Proin dui tortor, cursus ut consectetur at, aliquam vitae lorem. Nunc diam leo, posuere in ultricies placerat, laoreet sit amet nunc. Maecenas nec ante mauris. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean nec nisi sollicitudin, congue nibh sit amet, pulvinar sem. Aenean et ante semper, hendrerit magna eget, facilisis ligula. Praesent blandit orci sit amet risus cursus, at facilisis metus consequat.
+
+\chapter{How to shutdown Glados}
+\section{before you start}
+\par Nunc lacinia erat id lectus vulputate eleifend nec sed tortor. Nulla velit dui, faucibus quis mattis et, commodo mattis dui. Integer ac rutrum metus, ut gravida sem. Cras bibendum justo lectus, quis condimentum massa tincidunt a. Vestibulum eu odio eget eros elementum bibendum. In at pretium neque, id cursus felis. Ut posuere, quam ac feugiat egestas, quam massa viverra eros, a vulputate erat mi et elit. 
+
+\section{procedure}
+
+\par Vestibulum porta rutrum vehicula. Curabitur malesuada condimentum diam, id mattis diam porta quis. Curabitur vitae augue a arcu ornare condimentum. Donec eu venenatis libero, eu ultricies massa. Pellentesque cursus odio et eros semper aliquet. Nullam dictum et dolor eu facilisis. Aliquam leo neque, blandit at sapien quis, placerat tempus dolor. Aliquam tempus quam turpis. Aenean cursus vel ipsum ut condimentum. Fusce fringilla egestas elit vitae lobortis. Nam id leo congue, adipiscing neque vel, aliquam sapien. Vivamus ligula massa, adipiscing vel leo sit amet, sollicitudin tincidunt sapien.
+
+\section{disable main power supply}
+\par Nullam et sem suscipit, gravida odio a, semper est. Aliquam sit amet mauris id felis egestas consectetur a eu dui. Nullam pretium odio quis mauris placerat, a fermentum risus dictum. Donec tempor, massa a fringilla rhoncus, quam diam hendrerit tortor, ac blandit augue dui ac tortor. Suspendisse ac arcu ultricies, iaculis est nec, viverra risus. Aenean rhoncus velit vel leo luctus porta. Vestibulum euismod leo pulvinar lacinia condimentum. Sed ultricies mi id nisl rhoncus, in rutrum sem consequat. Proin mattis, est vel molestie gravida, odio lectus ullamcorper leo, id facilisis erat massa in quam. Proin dui tortor, cursus ut consectetur at, aliquam vitae lorem. Nunc diam leo, posuere in ultricies placerat, laoreet sit amet nunc. Maecenas nec ante mauris. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean nec nisi sollicitudin, congue nibh sit amet, pulvinar sem. Aenean et ante semper, hendrerit magna eget, facilisis ligula. Praesent blandit orci sit amet risus cursus, at facilisis metus consequat.
+
+\par Nunc lacinia erat id lectus vulputate eleifend nec sed tortor. Nulla velit dui, faucibus quis mattis et, commodo mattis dui. Integer ac rutrum metus, ut gravida sem. Cras bibendum justo lectus, quis condimentum massa tincidunt a. Vestibulum eu odio eget eros elementum bibendum. In at pretium neque, id cursus felis. Ut posuere, quam ac feugiat egestas, quam massa viverra eros, a vulputate erat mi et elit. 
+
+
+\par Vestibulum porta rutrum vehicula. Curabitur malesuada condimentum diam, id mattis diam porta quis. Curabitur vitae augue a arcu ornare condimentum. Donec eu venenatis libero, eu ultricies massa. Pellentesque cursus odio et eros semper aliquet. Nullam dictum et dolor eu facilisis. Aliquam leo neque, blandit at sapien quis, placerat tempus dolor. Aliquam tempus quam turpis. Aenean cursus vel ipsum ut condimentum. Fusce fringilla egestas elit vitae lobortis. Nam id leo congue, adipiscing neque vel, aliquam sapien. Vivamus ligula massa, adipiscing vel leo sit amet, sollicitudin tincidunt sapien.
+
+\par Nullam et sem suscipit, gravida odio a, semper est. Aliquam sit amet mauris id felis egestas consectetur a eu dui. Nullam pretium odio quis mauris placerat, a fermentum risus dictum. Donec tempor, massa a fringilla rhoncus, quam diam hendrerit tortor, ac blandit augue dui ac tortor. Suspendisse ac arcu ultricies, iaculis est nec, viverra risus. Aenean rhoncus velit vel leo luctus porta. Vestibulum euismod leo pulvinar lacinia condimentum. Sed ultricies mi id nisl rhoncus, in rutrum sem consequat. Proin mattis, est vel molestie gravida, odio lectus ullamcorper leo, id facilisis erat massa in quam. Proin dui tortor, cursus ut consectetur at, aliquam vitae lorem. Nunc diam leo, posuere in ultricies placerat, laoreet sit amet nunc. Maecenas nec ante mauris. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean nec nisi sollicitudin, congue nibh sit amet, pulvinar sem. Aenean et ante semper, hendrerit magna eget, facilisis ligula. Praesent blandit orci sit amet risus cursus, at facilisis metus consequat.
+
+\par Nunc lacinia erat id lectus vulputate eleifend nec sed tortor. Nulla velit dui, faucibus quis mattis et, commodo mattis dui. Integer ac rutrum metus, ut gravida sem. Cras bibendum justo lectus, quis condimentum massa tincidunt a. Vestibulum eu odio eget eros elementum bibendum. In at pretium neque, id cursus felis. Ut posuere, quam ac feugiat egestas, quam massa viverra eros, a vulputate erat mi et elit. 
+
+
+\end{document}
