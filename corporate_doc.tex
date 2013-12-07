@@ -19,6 +19,8 @@
 \newcommand{\CorpDocReviewDate}{}
 \newcommand{\CorpDocAuthor}{}
 \newcommand{\CorpChef}{}
+\newcommand{\CorpDocType}{}
+\newcommand{\CorpDocProject}{}
 
 % setup commands for the text tags.
 
@@ -38,6 +40,16 @@
 \renewcommand{\CorpChef}{#1}}
 
 
+\newcommand{\CorpSetDocType}[1]{
+\renewcommand{\CorpDocType}{#1}}
+
+
+\newcommand{\CorpSetDocProject}[1]{
+\renewcommand{\CorpDocProject}{#1}}
+
+
+
+
 % Document curtom text
 
 
@@ -48,7 +60,8 @@
 \CorpSetReviewDate{19/12/2013}
 \CorpSetAuthor{BipBip}
 \CorpSetChef{Field}
-
+\CorpSetDocType{Design Specification}
+\CorpSetDocProject{Project Glados}
 
 
 
@@ -110,24 +123,13 @@
 \fancyhead[L]{\includegraphics[height=1cm]{img/small_logo.png} }
 \setlength\headheight{33pt} % increased it becaes of the logo
 
-\fancyfoot[RO,RE]{ Bas Droite\\ \CorpDocDate }
-\fancyfoot[LO,LE]{Project\\ \CorpDocTitle}
+\fancyfoot[RO,RE]{ \CorpDocTitle \\ \CorpDocDate }
+\fancyfoot[LO,LE]{ \CorpDocProject \\ \CorpDocType}
 
 \assignpagestyle{\chapter}{fancy}
 
 
 \def\wl{\par \vspace{\baselineskip}}
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -137,10 +139,10 @@
 \begin{textblock*}{210mm}(0mm,70mm)
 \centering
 { \bfseries\Huge
-Project Glados
+\CorpDocProject
 \wl
 \vspace{-1.2ex}
-Design Specification
+\CorpDocType
 \wl
 \vspace{-1.2ex}
  \CorpDocTitle

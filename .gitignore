@@ -19,6 +19,7 @@ local.properties
 *.synctex.gz
 *.aux
 *.toc
+corporate_doc.pdf
 # External tool builders
 .externalToolBuilders/
 
