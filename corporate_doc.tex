@@ -9,6 +9,52 @@
 \usepackage{lastpage}
 \usepackage{graphicx} 
 
+
+%
+
+% define default values for the Text tags.
+
+\newcommand{\CorpDocTitle}{}
+\newcommand{\CorpDocDate}{}
+\newcommand{\CorpDocReviewDate}{}
+\newcommand{\CorpDocAuthor}{}
+\newcommand{\CorpChef}{}
+
+% setup commands for the text tags.
+
+\newcommand{\CorpSetDocTitle}[1]{
+\renewcommand{\CorpDocTitle}{#1}}
+
+\newcommand{\CorpSetDate}[1]{
+\renewcommand{\CorpDocDate}{#1}}
+
+\newcommand{\CorpSetReviewDate}[1]{
+\renewcommand{\CorpDocReviewDate}{#1}}
+
+\newcommand{\CorpSetAuthor}[1]{
+\renewcommand{\CorpDocAuthor}{#1}}
+
+\newcommand{\CorpSetChef}[1]{
+\renewcommand{\CorpChef}{#1}}
+
+
+% Document curtom text
+
+
+
+\CorpSetDocTitle{DocXXX}
+\CorpSetDate{08/12/2013}
+
+\CorpSetReviewDate{19/12/2013}
+\CorpSetAuthor{BipBip}
+\CorpSetChef{Field}
+
+
+
+
+
+
+
 %\usepackage[medium,compact,raggedright]{titlesec} % to customize the \chapter page
 \usepackage[compact]{titlesec} % to customize the \chapter page
 %\titleformat{\chapter}[frame]
@@ -64,17 +110,30 @@
 \fancyhead[L]{\includegraphics[height=1cm]{img/small_logo.png} }
 \setlength\headheight{33pt} % increased it becaes of the logo
 
-\fancyfoot[RO,RE]{ Bas Droite\\ Date }
-\fancyfoot[LO,LE]{Project\\ Doc Title}
+\fancyfoot[RO,RE]{ Bas Droite\\ \CorpDocDate }
+\fancyfoot[LO,LE]{Project\\ \CorpDocTitle}
 
 \assignpagestyle{\chapter}{fancy}
 
 
 \def\wl{\par \vspace{\baselineskip}}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 \begin{document}
 
-\textblockorigin{0cm}{0cm}
+\textblockorigin{0cm}{0cm} %  Document Title
 \begin{textblock*}{210mm}(0mm,70mm)
 \centering
 { \bfseries\Huge
@@ -84,14 +143,32 @@ Project Glados
 Design Specification
 \wl
 \vspace{-1.2ex}
- DOCXXX
+ \CorpDocTitle
    }
 \end{textblock*}
 
-\begin{textblock*}{80mm}(130mm,276mm)
+\begin{textblock*}{80mm}(130mm,276mm)  % document title on title page
 \huge\bfseries
-DOCXXX
+\CorpDocTitle
 \end{textblock*}
+
+\begin{textblock*}{50mm}(162mm,213mm)  % ReviewDate
+\huge\Large
+\CorpDocReviewDate
+\end{textblock*}
+
+\begin{textblock*}{50mm}(162mm,223mm)  % ReviewDate
+\huge\Large
+\CorpDocAuthor
+\end{textblock*}
+
+
+
+\begin{textblock*}{50mm}(162mm,233mm)  % Chef
+\huge\Large
+\CorpChef
+\end{textblock*}
+
 
 
 \includepdf{img/cover_text.pdf}
