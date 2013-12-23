@@ -8,14 +8,13 @@ Features
    - custom cover page
    - customized text on cover page
    - personalized header and footer
-
+   - personalize title presentation
+   - vertical filigrane on every page
+   - tweak document font
 To do
 =====
 
    - add custom commands to improve reusability of the template
-   - tweak document font
-   - personalize title presentation
-   - vertical filigrane on every page
 
 
 Licence

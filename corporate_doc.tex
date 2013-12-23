@@ -61,7 +61,7 @@
 
 
 
-\CorpSetDocTitle{DocXXX}
+\CorpSetDocTitle{Specxxxx}
 \CorpSetDate{08/12/2013}
 
 \CorpSetReviewDate{19/12/2013}
@@ -75,35 +75,15 @@
 
 
 
-%\usepackage[medium,compact,raggedright]{titlesec} % to customize the \chapter page
+
 \usepackage[compact]{titlesec} % to customize the \chapter page
-%\titleformat{\chapter}[frame]
-%{\normalfont}
-%{\filright
-%\footnotesize
-%\enspace SECTION \thechapter\enspace}
-%{8pt}
-%{\Large\bfseries\filright}
 
-%%\titleformat{\chapter}[block] {\Large\bfseries}
-%{\Large\bfseries
-% \thechapter.\enspace}
-%{1pt}
-%{\Large\bfseries\filright}
 
-%\renewcommand{\thechapter}{\Roman{chapter}}
-\titleformat{\chapter}[hang]
-{\bfseries\Large}
-{ \huge\thechapter.}
-{0ex}
-{ \huge
-%%%\titlerule
-%\vspace{2ex}%%
-%%\filright
-}
-[\vspace{-3.5ex}%
-%\titlerule
-]
+\newcommand{\hsp}{\hspace{20pt}}
+\titleformat{\chapter}[hang]{\huge\bfseries}{\thechapter.\hsp}{0pt}{\huge\bfseries}[\vspace{-2.5ex}]
+
+
+
 
 
 %\titlespacing{\chapter}
@@ -161,7 +141,8 @@
 \textblockorigin{0cm}{0cm} %  Document Title
 \begin{textblock*}{210mm}(0mm,70mm)
 \centering
-{ \bfseries\Huge
+{% \bfseries
+\Huge
 \CorpDocProject
 \wl
 \vspace{-1.2ex}
@@ -173,7 +154,7 @@
 \end{textblock*}
 
 \begin{textblock*}{80mm}(130mm,276mm)  % document title on title page
-\huge\bfseries
+\huge%\bfseries
 \CorpDocTitle
 \end{textblock*}
 
